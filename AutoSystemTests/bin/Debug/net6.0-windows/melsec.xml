@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <NodeClass Name="PLC设备" Description="各种PLC控制设备">
+    <DeviceNode Name="三菱PLC" Description="锅炉系统1#PLC" DeviceType="10" ConnectTimeOut="2000" ReConnectTime="5000" CreateTime="2022/3/30 下午 09:23:35" InstallationDate="2022/3/30 下午 09:23:35" IsActive="True" MaxErrorTimes="1" KeyWay="VarName" UseAlarmCheck="False" IpAddress="192.168.3.39" Port="6000" IsFX5UMC="false" PlcType="MCBinary">
+      <DeviceGroup Name="组对象" Description="作为一次批量的字节数据读取" Type="Melsec" StoreArea="D存储区" Length="100" Start="D0" IsActive="true">
+        <Variable Name="D0" Description="具体的通讯变量地址及类型" Type="Melsec" VarAddress="D0" Scale="1" Offset="0" Start="0" AccessProperty="只读" AlarmEnable="False" ArchiveEnable="False" SetLimitEnable="False" VarType="Short" />
+        <Variable Name="D1" Description="具体的通讯变量地址及类型" Type="Melsec" VarAddress="D1" Scale="1" Offset="0" Start="1" AccessProperty="只读" AlarmEnable="False" ArchiveEnable="False" SetLimitEnable="False" VarType="Float" />
+        <Variable Name="D3" Description="具体的通讯变量地址及类型" Type="Melsec" VarAddress="D3" Scale="1" Offset="0" Start="3" AccessProperty="只读" AlarmEnable="False" ArchiveEnable="False" SetLimitEnable="False" VarType="Double" />
+      </DeviceGroup>
+    </DeviceNode>
+  </NodeClass>
+  <NodeClass Name="OPC客户端" Description="OPC相关客户端" />
+  <NodeClass Name="Modbus客户端" Description="Modbus相关客户端" />
+  <NodeClass Name="Custom客户端" Description="Custom相关客户端" />
+  <NodeClass Name="服务器" Description="自定义服务器" />
+</Settings>

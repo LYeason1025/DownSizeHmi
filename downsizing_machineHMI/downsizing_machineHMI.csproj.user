@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\AutoView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\DetailView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\DetailView1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\DetailView2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ListView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\MonitorView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\StudentView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ThicknessAdjustView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\WarmUpView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AutoView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DetailView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DetailView1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DetailView2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ListView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MonitorView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\StudentView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ThicknessAdjustView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\WarmUpView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

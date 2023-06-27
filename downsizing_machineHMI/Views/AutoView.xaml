@@ -1,0 +1,271 @@
+﻿<UserControl x:Class="downsizing_machineHMI.Views.AutoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:downsizing_machineHMI.Views"
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
+             mc:Ignorable="d" d:DesignWidth="800" Height="851">
+    <Grid>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="AUTO"/>
+                    <RowDefinition Height="AUTO"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="Recipe"  Margin="5,5,5,5" FontSize="28" Foreground="#b4446c"/>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Text="ID" Grid.Row="0" Grid.Column="0" Style="{StaticResource main_TextBlock}"/>
+                            <TextBlock Text="Cmdt." Grid.Row="1" Grid.Column="0" Style="{StaticResource main_TextBlock}"/>
+
+                            <TextBox Name="IDTextBox" Grid.Row="0" Grid.Column="1" Width="100" HorizontalAlignment="Left" Style="{StaticResource main_TextBox}"/>
+                            <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource main_TextBox}" />
+                        </Grid>
+                        <Grid Grid.Row="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Text="尺寸"    Style="{StaticResource main_TextBlock}" Grid.Row="0" Grid.Column="0"/>
+                            <TextBlock Text="初始厚度" Style="{StaticResource main_TextBlock}" Grid.Row="1" Grid.Column="0"/>
+                            <TextBlock Text="目标厚度" Style="{StaticResource main_TextBlock}" Grid.Row="2" Grid.Column="0"/>
+                            <TextBlock Text="去除厚度" Style="{StaticResource main_TextBlock}" Grid.Row="3" Grid.Column="0"/>
+                            <TextBlock Text="磨削情况" Style="{StaticResource main_TextBlock}" Grid.Row="4" Grid.Column="0"/>
+                            <TextBlock Text="测量情况" Style="{StaticResource main_TextBlock}" Grid.Row="5" Grid.Column="0"/>
+                            <TextBlock Text="气压控制" Style="{StaticResource main_TextBlock}" Grid.Row="6" Grid.Column="0"/>
+                            <TextBlock Text="磨削工艺" Style="{StaticResource main_TextBlock}" Grid.Row="7" Grid.Column="0"/>
+
+                            <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                                <TextBlock Text="Z1=" Style="{StaticResource main_TextBlock}" />
+                                <TextBox Width="100" Style="{StaticResource main_TextBox}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                                <TextBlock Text="Z2=" Style="{StaticResource main_TextBlock}" />
+                                <TextBox Width="100" Style="{StaticResource main_TextBox}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="4" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                                <TextBlock Text="Z1=" Style="{StaticResource main_TextBlock}" />
+                                <TextBox Width="100" Style="{StaticResource main_TextBox}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="5" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                                <TextBlock Text="Z2=" Style="{StaticResource main_TextBlock}" />
+                                <TextBox Width="100" Style="{StaticResource main_TextBox}"/>
+                            </StackPanel>
+
+                            <TextBox Grid.Row="0" Grid.Column="2" Style="{StaticResource main_TextBox}"/>
+                            <TextBox Grid.Row="1" Grid.Column="2" Style="{StaticResource main_TextBox}"/>
+                            <TextBox Grid.Row="2" Grid.Column="2" Style="{StaticResource main_TextBox}"/>
+                            <TextBox Grid.Row="3" Grid.Column="2" Style="{StaticResource main_TextBox}"/>
+                            <TextBox Grid.Row="6" Grid.Column="2" Style="{StaticResource main_TextBox}"/>
+                            <TextBox Grid.Row="7" Grid.Column="2" Style="{StaticResource main_TextBox}"/>
+
+
+                            <TextBlock Text="inch" Style="{StaticResource main_TextBlock}" Grid.Column="3" Grid.Row="0"/>
+                            <TextBlock Text="um" Style="{StaticResource main_TextBlock}" Grid.Column="3" Grid.Row="1"/>
+                            <TextBlock Text="um" Style="{StaticResource main_TextBlock}" Grid.Column="3" Grid.Row="2"/>
+                            <TextBlock Text="um" Style="{StaticResource main_TextBlock}" Grid.Column="3" Grid.Row="3"/>
+
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Column="1" VerticalAlignment="Bottom">
+
+                        <StackPanel Grid.Column="2" Orientation="Vertical">
+                            <!--<Button Name="List" Content="list" Style="{StaticResource main_Button}" Click="List_Click" />-->
+
+                            <Button x:Name="List" Style="{StaticResource main_Button}" Click="List_Click">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <fa:ImageAwesome Icon="List" Foreground="White" Width="50" Margin="5,5,5,5"/>
+                                    <TextBlock Text="清单" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
+                                </Grid>
+                            </Button>
+
+                            <Button x:Name="Edit" Style="{StaticResource main_Button}" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <fa:ImageAwesome Icon="Edit" Foreground="White" Width="50" Margin="5,5,5,5"/>
+                                    <TextBlock Text="编辑" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
+                                </Grid>
+                            </Button>
+
+                            <Button x:Name="Detail" Style="{StaticResource main_Button}"  Click="Detail_Click" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <fa:ImageAwesome Icon="FileText" Foreground="White" Width="50" Margin="5,5,5,5"/>
+                                    <TextBlock Text="详情" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
+                                </Grid>
+                            </Button>
+
+                            <Button x:Name="Option" Style="{StaticResource main_Button}" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <fa:ImageAwesome Icon="Compass" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                                    <TextBlock Text="选项" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
+                                </Grid>
+                            </Button>
+                            <!--<Button Content="Edit" Style="{StaticResource main_Button}" />-->
+                            <!--<Button Name="Detail" Content="Detail" Style="{StaticResource main_Button}" Click="Detail_Click"/>-->
+                            <!--<Button Content="OPtion" Style="{StaticResource main_Button}"/>-->
+                        </StackPanel>
+                    </Grid>
+
+                </Grid>
+            </Grid>
+
+
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="AUTO"/>
+                    <RowDefinition Height="AUTO"/>
+                </Grid.RowDefinitions>
+                <StackPanel>
+                    <Separator Grid.Row="0" Margin="0,5,5,5"/>
+                    <TextBlock Grid.Row="0" Text="STATUS" Foreground="#b4446c" Margin="5,5,5,5" FontSize="28" />
+                </StackPanel>
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="1" Text="Z1" Style="{StaticResource main_TextBlock}"/>
+                            <TextBlock Grid.Row="0" Grid.Column="2" Text="Z2" Style="{StaticResource main_TextBlock}" />
+
+                            <TextBlock Text="主轴转速" Grid.Row="1" Grid.Column="0" Style="{StaticResource main_TextBlock}"/>
+                            <TextBlock Text="砂轮总磨损" Grid.Row="2" Grid.Column="0" Style="{StaticResource main_TextBlock}"/>
+                            <TextBlock Text="砂轮磨损" Grid.Row="3" Grid.Column="0" Style="{StaticResource main_TextBlock}"/>
+                            <TextBlock Text="晶片总量" Grid.Row="4" Grid.Column="0" Style="{StaticResource main_TextBlock}"/>
+                            <TextBlock Text="磨削总量" Grid.Row="5" Grid.Column="0" Style="{StaticResource main_TextBlock}"/>
+                            <TextBlock Text="冷却水" Grid.Row="6" Grid.Column="0" Style="{StaticResource main_TextBlock}"/>
+
+                            <TextBlock Text="rpm" Grid.Row="1" Grid.Column="3" Style="{StaticResource main_TextBlock}"/>
+                            <TextBlock Text="um" Grid.Row="2" Grid.Column="3" Style="{StaticResource main_TextBlock}"/>
+                            <TextBlock Text="um" Grid.Row="3" Grid.Column="3" Style="{StaticResource main_TextBlock}"/>
+                            <TextBlock Text="pcs" Grid.Row="4" Grid.Column="3" Style="{StaticResource main_TextBlock}"/>
+                            <TextBlock Text="min" Grid.Row="5" Grid.Column="3" Style="{StaticResource main_TextBlock}"/>
+
+                            <TextBox Grid.Row="1" Grid.Column="1" Margin="5,5,5,5" Style="{StaticResource main_TextBox}"/>
+                            <TextBox Grid.Row="2" Grid.Column="1" Margin="5,5,5,5" Style="{StaticResource main_TextBox}"/>
+                            <TextBox Grid.Row="3" Grid.Column="1" Margin="5,5,5,5" Style="{StaticResource main_TextBox}"/>
+
+                            <ToggleButton Name="SwitchZ1" Content="OFF" Grid.Row="6" Grid.Column="1" Margin="5,5,5,5" 
+                                          VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Checked="SwitchZ1_Checked" Unchecked="SwitchZ1_Unchecked"/>
+
+                            <TextBox Grid.Row="1" Grid.Column="2" Margin="5,5,5,5" Style="{StaticResource main_TextBox}"/>
+                            <TextBox Grid.Row="2" Grid.Column="2" Margin="5,5,5,5" Style="{StaticResource main_TextBox}"/>
+                            <TextBox Grid.Row="3" Grid.Column="2" Margin="5,5,5,5" Style="{StaticResource main_TextBox}"/>
+                            <TextBox Grid.Row="4" Grid.Column="2" Margin="5,5,5,5" Style="{StaticResource main_TextBox}"/>
+                            <TextBox Grid.Row="5" Grid.Column="2" Margin="5,5,5,5" Style="{StaticResource main_TextBox}"/>
+                            <ToggleButton Name="SwitchZ2" Content="OFF" Grid.Row="6" Grid.Column="2" Margin="5,5,5,5" 
+                                          HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Checked="SwitchZ2_Checked" Unchecked="SwitchZ2_Unchecked"/>
+                            
+                        </Grid>
+
+                        <Label Content="Warm-up" HorizontalAlignment="Center" FontSize="26"/>
+                    </StackPanel>
+
+                    <Grid Grid.Column="1" VerticalAlignment="Bottom">
+                        <StackPanel>
+                            <Button x:Name="DetailStatus" Style="{StaticResource main_Button}" Click="Detail_Click" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <fa:ImageAwesome Icon="FileText" Foreground="White" Width="50" Margin="5,5,5,5"/>
+                                    <TextBlock Text="详情" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
+                                </Grid>
+                            </Button>
+                            <Button x:Name="Log" Style="{StaticResource main_Button}" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <fa:ImageAwesome Icon="print" Foreground="White" Width="50" Margin="5,5,5,5"/>
+                                    <TextBlock Text="日志" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
+                                </Grid>
+                            </Button>
+                            <!--<Button Style="{StaticResource main_Button}" Margin="5,5,5,5"/>-->
+                            <!--<Button Style="{StaticResource main_Button}" Margin="5,5,5,5"/>-->
+                        </StackPanel>
+                    </Grid>
+
+                </Grid>
+
+            </Grid>
+
+
+        </Grid>
+    </Grid>
+</UserControl>

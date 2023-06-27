@@ -1,0 +1,332 @@
+﻿<Window x:Class="downsizing_machineHMI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        xmlns:local="clr-namespace:downsizing_machineHMI" 
+        mc:Ignorable="d" WindowStyle="None"
+      
+       
+        WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="Transparent" BorderThickness="0"
+        Title="MainWindow" Height="1080" Width="1920">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="865"/>
+            <RowDefinition Height="105"/>
+        </Grid.RowDefinitions>
+
+        <Border Name="titleBar" Grid.Row="0" Background="#312d50" MouseMove="titleBar_MouseMove" BorderThickness="0"/>
+        <Border Grid.Row="1"  BorderThickness="0" Background="#382f50">
+           
+        </Border>
+        <Border Grid.Row="2" Background="#252321" BorderThickness="0"/>
+
+        <Grid Grid.Row="0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <StackPanel Orientation="Horizontal" Grid.Column="0">
+                <Rectangle Fill="#312d50"  Width="100"/>
+                <Button Width="100" Height="100" Name="cassOpen" Margin="10,10,10,10" Click="IOcheck_Click" >
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" >
+                        <fa:ImageAwesome Icon="Magic" Width="50" Foreground="White"/>
+                        <TextBlock Text="Cass.open" Margin="8" />
+                    </StackPanel>
+                </Button>
+                
+            </StackPanel>
+           
+            <UniformGrid Margin="5,5,5,5" Grid.Column="1" >
+               
+                
+                <TextBox  Name="timeTextBox" Margin="5,5,5,5" HorizontalAlignment="Stretch" Style="{StaticResource main_TextBox}"/>
+                <TextBox  Name="statusTextBox" Margin="5,5,5,5" HorizontalAlignment="Stretch" Style="{StaticResource main_TextBox}"/>
+                <TextBox  Name="numberTextBox" Margin="5,5,5,5" HorizontalAlignment="Stretch" Style="{StaticResource main_TextBox}"/>
+                <TextBox  Margin="5,5,5,5" HorizontalAlignment="Stretch" Style="{StaticResource main_TextBox}"/>
+
+                <TextBox Margin="5,5,5,5" HorizontalAlignment="Stretch" Style="{StaticResource main_TextBox}"/>
+            </UniformGrid>
+            
+            <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Name="IOPort" Margin="10,10,10,10" Width="100" Height="100" Click="IOPort_Click">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <fa:ImageAwesome Icon="Terminal"  Width="50" Foreground="White"/>
+                        <TextBlock Text="测试通讯" HorizontalAlignment="Center" Margin="8" FontFamily="FontAwesome"/>
+                    </StackPanel>
+                </Button>
+               
+                <Button Name="MiniBtn" Content="Mini" Margin="10,10,10,10" Width="100" Height="100" Click="MiniBtn_Click"/>
+                
+                <Button Name="CloseBtn" Content="Close" Margin="10,10,10,10" Width="100" Height="100" Click="CloseBtn_Click"/>
+            </StackPanel>
+           
+        </Grid>
+
+
+        
+        
+        <ContentControl Grid.Row="1" x:Name="MainArea"/>
+
+        <Grid Grid.Row="1">
+           
+        </Grid>
+        
+
+        <Grid Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--<Image Source="/res/png/ope.png" Grid.Column="1"/>-->
+
+
+                <ContentControl Grid.Column="0" x:Name="ContentControl"/>
+                <ContentControl Grid.Column="1" x:Name="ContentControlRight"/>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+
+            <ContentControl Name="menuLeft" Grid.Column="0">
+                <StackPanel Orientation="Horizontal"  VerticalAlignment="Center">
+                    <Button x:Name="AutoBtn" Style="{StaticResource main_Button}" Click="AutoBtn_Click">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <fa:ImageAwesome Icon="Font" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                            <TextBlock Text="自动" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
+                        </Grid>
+                    </Button>
+                    <!--<Button Name="AutoBtn" Content="AUTO" Style="{StaticResource main_Button}" Click="AutoBtn_Click" />-->
+                    <Button x:Name="MaintBtn" Style="{StaticResource main_Button}" Click="AutoBtn_Click">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <fa:ImageAwesome Icon="Wrench" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                            <TextBlock Text="维护" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
+                        </Grid>
+                    </Button>
+                    <!--<Button Name="MaintBtn" Content="Maint." Style="{StaticResource main_Button}" />-->
+                    <Button x:Name="DataBtn" Style="{StaticResource main_Button}" Click="AutoBtn_Click">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <fa:ImageAwesome Icon="Database" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                            <TextBlock Text="数据" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
+                        </Grid>
+                    </Button>
+                    <!--<Button Name="DataBtn" Content="Data" Style="{StaticResource main_Button}" />-->
+                </StackPanel>
+            </ContentControl>
+
+            <ContentControl x:Name="initialTextBox" Grid.Column="0" Visibility="Collapsed">
+                <StackPanel>
+                    <TextBox Text="111" Height="90" Style="{StaticResource main_TextBox}"/>
+                </StackPanel>
+            </ContentControl>
+
+            <ContentControl Grid.Column="1" Name="menuRight">
+                <StackPanel Orientation="Horizontal"  VerticalAlignment="Center" >
+                    <Button x:Name="InitialBtn" Style="{StaticResource main_Button}" Click="InitialBtn_Click">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <fa:ImageAwesome Icon="Refresh" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                            <TextBlock Text="初始化" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
+                        </Grid>
+                    </Button>
+                    
+                    <!--<Button Name="InitialBtn" Content="Initial" Style="{StaticResource main_Button}"  Click="InitialBtn_Click"/>-->
+                    <Button x:Name="WarmUpBtn" Style="{StaticResource main_Button}" Click="WarmUpBtn_Click">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <fa:ImageAwesome Icon="DotCircleOutline" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                            <TextBlock Text="热机" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
+                        </Grid>
+                    </Button>
+                    <!--<Button Name="WarmUpBtn" Content="Warm Up" Style="{StaticResource main_Button}" Click="WarmUpBtn_Click" />-->
+                    <Button x:Name="GaugeTestBtn" Style="{StaticResource main_Button}" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <fa:ImageAwesome Icon="textheight" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                            <TextBlock Text="厚度测试" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
+                        </Grid>
+                    </Button>
+                    <!--<Button Name="GaugeTestBtn" Content="Gauge Test" Style="{StaticResource main_Button}" />-->
+                </StackPanel>
+            </ContentControl>
+
+            <ContentControl Grid.Column="1" Name="initialStart" Visibility="Collapsed">
+                <StackPanel Orientation="Horizontal"  VerticalAlignment="Center" >
+
+                    <Button x:Name="InitialStartBtn" Style="{StaticResource main_Button}" Click="InitialStartBtn_Click">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <fa:ImageAwesome Icon="Play" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                            <TextBlock Text="开始" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
+                        </Grid>
+                    </Button>
+                    <!--<Button Name="InitialStartBtn" Content="Start" Style="{StaticResource main_Button}" InitialStartBtn_Click/>-->
+                </StackPanel>
+            </ContentControl>
+
+            <ContentControl Grid.Column="1" Name="WarmUpStart" Visibility="Collapsed">
+                <StackPanel Orientation="Horizontal"  VerticalAlignment="Center" >
+                    <Button x:Name="WarmUpStartBtn" Style="{StaticResource main_Button}" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <fa:ImageAwesome Icon="Play" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                            <TextBlock Text="开始" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
+                        </Grid>
+                    </Button>
+
+
+                    <!--<Button Name="WarmUpStartBtn" Content="Start" Style="{StaticResource main_Button}"  />-->
+
+                    <Button x:Name="WarmUpStopBtn" Style="{StaticResource main_Button}" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <fa:ImageAwesome Icon="Pause" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                            <TextBlock Text="停止" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
+                        </Grid>
+                    </Button>
+                    <!--<Button Name="WarmUpStopBtn" Content="Stop" Style="{StaticResource main_Button}"  />-->
+                </StackPanel>
+            </ContentControl>
+
+            <ContentControl Grid.Column="1" Name="FAPasue" Visibility="Collapsed">
+                <StackPanel Orientation="Horizontal"  VerticalAlignment="Center" >
+                    <Button x:Name="FAPasueBtn" Style="{StaticResource main_Button}" Click="FAPasueBtn_Click">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <fa:ImageAwesome Icon="Pause" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                            <TextBlock Text="暂停" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
+                        </Grid>
+                    </Button>
+                    <!--<Button Name="FAPasueBtn" Content="Pasue" Style="{StaticResource main_Button}" Click="FAPasueBtn_Click"/>-->
+                </StackPanel>
+            </ContentControl>
+
+            <ContentControl Grid.Column="1" Name="FAPasueCL" Visibility="Collapsed">
+                <StackPanel Orientation="Horizontal"  VerticalAlignment="Center" >
+                    <Button x:Name="FAPasueContinueBtn" Style="{StaticResource main_Button}" Click="FAPasueContinueBtn_Click">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <fa:ImageAwesome Icon="Play" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                            <TextBlock Text="继续" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
+                        </Grid>
+                    </Button>
+
+                    <!--<Button Name="FAPasueContinueBtn" Content="Continue" Style="{StaticResource main_Button}"  Click="FAPasueContinueBtn_Click"/>-->
+                    <Button x:Name="FAPasuePurgeBtn" Style="{StaticResource main_Button}" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <fa:ImageAwesome Icon="Compress" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                            <TextBlock Text="清除" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
+                        </Grid>
+                    </Button>
+
+                    <!--<Button Name="FAPasuePurgeBtn" Content="Purge" Style="{StaticResource main_Button}" />-->
+                    <Button Name="FAPasuePurgeGPBtn" Style="{StaticResource main_Button}" >
+                        <StackPanel >
+                            <TextBlock Text="Purge" VerticalAlignment="Center"/>
+                            <TextBlock Text="(Grind Pass)" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="FAPasueHOBtn" Style="{StaticResource main_Button}" Click="Height_Offset_Click">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <fa:ImageAwesome Icon="Header" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                            <TextBlock Text="高度偏移" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
+                        </Grid>
+                    </Button>
+
+                    <!--<Button Name="FAPasueHOBtn" Content="Height Offset" Style="{StaticResource main_Button}" Click="Height_Offset_Click" />-->
+                </StackPanel>
+            </ContentControl>
+
+            <ContentControl HorizontalAlignment="Right" Grid.Column="1" VerticalAlignment="Center" Name="menuSkip" >
+
+                <Button x:Name="FABtn" Style="{StaticResource main_Button}" Click="FABtn_Click">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <fa:ImageAwesome Icon="Play" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                        <TextBlock Text="开始" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
+                    </Grid>
+                </Button>
+                <!--<Button Name="FABtn" Content="FA/Start" Style="{StaticResource main_Button}" Click="FABtn_Click"/>-->
+            </ContentControl>
+
+            <ContentControl HorizontalAlignment="Right" Grid.Column="1" VerticalAlignment="Center" Name="menuExit"  Visibility="Collapsed">
+                <Button x:Name="Exit" Style="{StaticResource main_Button}" Click="Exit_Click">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <fa:ImageAwesome Icon="Reply" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                        <TextBlock Text="返回" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
+                    </Grid>
+                </Button>
+                <!--<Button Name="Exit" Content="Exit" Style="{StaticResource main_Button}" Click="Exit_Click" />-->
+            </ContentControl>
+
+
+        </Grid>
+
+
+
+    </Grid>
+</Window>

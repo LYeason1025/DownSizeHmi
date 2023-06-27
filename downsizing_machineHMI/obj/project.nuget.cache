@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "hzqNzbATqfYqKSotv/gvNUFWcF6qHngg7aiAps5QJi8ZTO69jXC/V75ZlJJ/j9ivyX1aeNYO1JjOmD/RkiPKeg==",
+  "success": true,
+  "projectFilePath": "D:\\减薄机软件\\downsizing_machineHMI0420\\downsizing_machineHMI\\downsizing_machineHMI\\downsizing_machineHMI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\OyO\\.nuget\\packages\\fontawesome.wpf\\4.7.0.9\\fontawesome.wpf.4.7.0.9.nupkg.sha512",
+    "C:\\Users\\OyO\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\OyO\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\OyO\\.nuget\\packages\\wpf-ui\\2.0.3\\wpf-ui.2.0.3.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用“.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1”而不是项目目标框架“net6.0-windows7.0”还原包“FontAwesome.WPF 4.7.0.9”。此包可能与项目不完全兼容。",
+      "libraryId": "FontAwesome.WPF",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
+}

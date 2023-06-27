@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="downsizing_machineHMI.Views.DetailView1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:downsizing_machineHMI.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <StackPanel>
+        <TextBlock Text="Stautus/Detail 1" FontSize="18" Background="AliceBlue" Foreground="#b4446c"/>
+
+
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="Z1" Grid.Row="0" Grid.Column="1" Style="{StaticResource main_TextBlock}"/>
+            <TextBlock Text="Z2" Grid.Row="0" Grid.Column="2" Style="{StaticResource main_TextBlock}"/>
+
+            <TextBlock Text="Wheel Total Wear"     Grid.Row="1" Grid.Column="0" Style="{StaticResource main_TextBlock}"/>
+            <TextBlock Text="Wheel Wear"           Grid.Row="2" Grid.Column="0" Style="{StaticResource main_TextBlock}"/>
+            <TextBlock Text="Useable Tooth"        Grid.Row="3" Grid.Column="0" Style="{StaticResource main_TextBlock}"/>
+            <TextBlock Text="Estimated Wafers"     Grid.Row="4" Grid.Column="0" Style="{StaticResource main_TextBlock}"/>
+            <TextBlock Text="Ground Wafers"        Grid.Row="6" Grid.Column="0" Style="{StaticResource main_TextBlock}"/>
+            <TextBlock Text="Total Wafers"         Grid.Row="7" Grid.Column="0" Style="{StaticResource main_TextBlock}"/>
+            <TextBlock Text="Total Grinding Times" Grid.Row="8" Grid.Column="0" Style="{StaticResource main_TextBlock}"/>
+            <TextBlock Text="Warm up Time"         Grid.Row="9" Grid.Column="0" Style="{StaticResource main_TextBlock}"/>
+            <TextBlock Text="Wheel Wear Ratio"     Grid.Row="5" Grid.Column="0" Style="{StaticResource main_TextBlock}"/>
+
+            <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+            <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+            <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+            <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+            <TextBox Grid.Row="5" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+            <TextBox Grid.Row="6" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+
+            <TextBox Grid.Row="9" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+
+            <TextBox Grid.Row="1" Grid.Column="2" Style="{StaticResource main_TextBox}"/>
+            <TextBox Grid.Row="2" Grid.Column="2" Style="{StaticResource main_TextBox}"/>
+            <TextBox Grid.Row="3" Grid.Column="2" Style="{StaticResource main_TextBox}"/>
+            <TextBox Grid.Row="4" Grid.Column="2" Style="{StaticResource main_TextBox}"/>
+            <TextBox Grid.Row="5" Grid.Column="2" Style="{StaticResource main_TextBox}"/>
+            <TextBox Grid.Row="6" Grid.Column="2" Style="{StaticResource main_TextBox}"/>
+            <TextBox Grid.Row="7" Grid.Column="2" Style="{StaticResource main_TextBox}"/>
+            <TextBox Grid.Row="8" Grid.Column="2" Style="{StaticResource main_TextBox}"/>
+            <TextBox Grid.Row="9" Grid.Column="2" Style="{StaticResource main_TextBox}"/>
+
+            <TextBlock Text="um"           Grid.Row="1" Grid.Column="3" Style="{StaticResource main_TextBlock}"/>
+            <TextBlock Text="um"           Grid.Row="2" Grid.Column="3" Style="{StaticResource main_TextBlock}"/>
+            <TextBlock Text="um"           Grid.Row="3" Grid.Column="3" Style="{StaticResource main_TextBlock}"/>
+            <TextBlock Text="um/p"         Grid.Row="4" Grid.Column="3" Style="{StaticResource main_TextBlock}"/>
+            <TextBlock Text="pcs"          Grid.Row="6" Grid.Column="3" Style="{StaticResource main_TextBlock}"/>
+            <TextBlock Text="pcs"          Grid.Row="7" Grid.Column="3" Style="{StaticResource main_TextBlock}"/>
+            <TextBlock Text="pcs"          Grid.Row="8" Grid.Column="3" Style="{StaticResource main_TextBlock}"/>
+            <TextBlock Text="min"          Grid.Row="9" Grid.Column="3" Style="{StaticResource main_TextBlock}"/>
+            <TextBlock Text="min"          Grid.Row="5" Grid.Column="3" Style="{StaticResource main_TextBlock}"/>
+
+        </Grid>
+
+
+
+
+
+
+    </StackPanel>
+
+
+</UserControl>
+

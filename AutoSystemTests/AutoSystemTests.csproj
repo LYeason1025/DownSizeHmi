@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Conf\" />
+    <Folder Include="UI\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Comm.MelsecLib\Comm.MelsecLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="xktComm">
+      <HintPath>xktComm.dll</HintPath>
+    </Reference>
+    <Reference Include="xktNodeSettings">
+      <HintPath>xktNodeSettings.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,150 @@
+﻿<UserControl x:Class="downsizing_machineHMI.Views.MonitorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             xmlns:local="clr-namespace:downsizing_machineHMI.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Image Source="/Contents/Image/monitor.png" VerticalAlignment="Center" HorizontalAlignment="Center" Width="500" Height="500"/>
+        <StackPanel Grid.Column="1" VerticalAlignment="Bottom">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <ui:ProgressRing Width="100" Height="100" Grid.Column="0" HorizontalAlignment="Right"/>
+                <ui:ProgressRing Width="100" Height="100" Grid.Column="2" HorizontalAlignment="Left"/>
+                <Grid Width="390" Height="160" Grid.Column="1" VerticalAlignment="Bottom" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Border Background="AliceBlue" Grid.Column="1" Grid.Row="1" BorderBrush="Black"/>
+                    <Border Background="AliceBlue" Grid.Column="1" Grid.Row="2" BorderBrush="Black"/>
+                    <Border Background="AliceBlue" Grid.Column="1" Grid.Row="3" BorderBrush="Black"/>
+
+                    <Button Width="130" Height="50"  Margin="5,5,5,5" Content="Cass.A" Grid.Column="0" Grid.Row="0"/>
+                    <Button Width="130" Height="50" Margin="5,5,5,5" Content="Cass.B" Grid.Column="2" Grid.Row="0"/>
+
+                    <TextBox Grid.Row="1" Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                    <TextBox Grid.Row="2" Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                    <TextBox Grid.Row="3" Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+
+                    <TextBlock Text="LOAD" Grid.Row="1" Grid.Column="1" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Gray" />
+                    <TextBlock Text="UNLOAD" Grid.Row="2" Grid.Column="1" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Gray" />
+                    <TextBlock Text="STATUS" Grid.Row="3" Grid.Column="1" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Gray" />
+
+                    <TextBox Grid.Row="1" Grid.Column="2" Style="{StaticResource main_TextBox}"/>
+                    <TextBox Grid.Row="2" Grid.Column="2" Style="{StaticResource main_TextBox}"/>
+                    <TextBox Grid.Row="3" Grid.Column="2" Style="{StaticResource main_TextBox}"/>
+                </Grid>
+
+            </Grid>
+            <Rectangle Height="80"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="1" HorizontalAlignment="Center">
+                    <TextBlock Text="T.TABLE" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Gray" Background="AliceBlue"/>
+                    <Label Content="PAUSE" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Gray"/>
+                </StackPanel>
+
+            </Grid>
+            <Rectangle Height="110"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" HorizontalAlignment="Right" >
+                    <TextBlock Text="T.ARM1" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Gray" Background="AliceBlue"/>
+                    <Label Content="PAUSE" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Gray"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" HorizontalAlignment="Center">
+                    <TextBlock Text="C.T.WASH" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Gray" Background="AliceBlue"/>
+                    <Label Content="PAUSE" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Gray"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2" HorizontalAlignment="Left">
+                    <TextBlock Text="T.ARM2" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Gray" Background="AliceBlue"/>
+                    <Label Content="PAUSE" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Gray"/>
+                </StackPanel>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" HorizontalAlignment="Right" Margin="0,20,20,20">
+                    <TextBlock Text="S.TABLE" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Gray" Background="AliceBlue"/>
+                    <Label Content="PAUSE" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Gray"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2" HorizontalAlignment="Left" Margin="20,20,0,20">
+                    <TextBlock  Text="P.TABLE" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Gray"
+                                       Background="AliceBlue"/>
+                    <Label Content="PAUSE" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Gray"/>
+                </StackPanel>
+            </Grid>
+            <Rectangle Height="40"/>
+            <StackPanel>
+                <TextBlock Text="ROBOT" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Gray" Background="AliceBlue"/>
+                <Label Content="PAUSE" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Gray"/>
+            </StackPanel>
+            <Grid Width="390" Height="200" Grid.Column="1" VerticalAlignment="Bottom">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Border Background="AliceBlue" Grid.Column="1" Grid.Row="1" BorderBrush="Black"/>
+                <Border Background="AliceBlue" Grid.Column="1" Grid.Row="2" BorderBrush="Black"/>
+                <Border Background="AliceBlue" Grid.Column="1" Grid.Row="3" BorderBrush="Black"/>
+
+                <Button Width="130" Height="50"  Margin="5,5,5,5" Content="Cass.A" Grid.Column="0" Grid.Row="0"/>
+                <Button Width="130" Height="50" Margin="5,5,5,5" Content="Cass.B" Grid.Column="2" Grid.Row="0"/>
+
+                <TextBox Grid.Row="1" Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                <TextBox Grid.Row="2" Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                <TextBox Grid.Row="3" Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+
+                <TextBlock Text="LOAD" Grid.Row="1" Grid.Column="1" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Gray" />
+                <TextBlock Text="UNLOAD" Grid.Row="2" Grid.Column="1" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Gray" />
+                <TextBlock Text="STATUS" Grid.Row="3" Grid.Column="1" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Gray" />
+
+                <TextBox Grid.Row="1" Grid.Column="2" Style="{StaticResource main_TextBox}"/>
+                <TextBox Grid.Row="2" Grid.Column="2" Style="{StaticResource main_TextBox}"/>
+                <TextBox Grid.Row="3" Grid.Column="2" Style="{StaticResource main_TextBox}"/>
+            </Grid>
+
+        </StackPanel>
+    </Grid>
+
+</UserControl>
+

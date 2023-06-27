@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Comm.MelsecLib/1.0.0": {
+        "dependencies": {
+          "DataConvertLib": "1.0.0"
+        },
+        "runtime": {
+          "Comm.MelsecLib.dll": {}
+        }
+      },
+      "DataConvertLib/1.0.0": {
+        "runtime": {
+          "DataConvertLib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Comm.MelsecLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DataConvertLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

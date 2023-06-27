@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+	  <UseWindowsForms>True</UseWindowsForms>	  
+    <UseWPF>true</UseWPF>
+    <PlatformTarget>x86</PlatformTarget>
+    <Platforms>AnyCPU;x86</Platforms>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Contents\Image\monitor.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
+    <PackageReference Include="WPF-UI" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="AxInterop.ActProgTypeLib">
+      <HintPath>Dependencies\AxInterop.ActProgTypeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.ActUtlTypeLib">
+      <HintPath>Dependencies\AxInterop.ActUtlTypeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ActProgTypeLib">
+      <HintPath>Dependencies\Interop.ActProgTypeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ActUtlTypeLib">
+      <HintPath>Dependencies\Interop.ActUtlTypeLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Contents\Image\monitor.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Contents\Style\" />
+    <Folder Include="Converts\" />
+    <Folder Include="Contents\Font\" />
+    <Folder Include="Utils\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Comm.MelsecLib\Comm.MelsecLib.csproj" />
+  </ItemGroup>
+
+</Project>

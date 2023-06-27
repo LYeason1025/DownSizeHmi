@@ -1,0 +1,225 @@
+﻿<UserControl x:Class="downsizing_machineHMI.Views.WarmUpView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:downsizing_machineHMI.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <StackPanel>
+            <Grid Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="350"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="Moving" Style="{StaticResource main_TextBlock}"/>
+                <TextBlock Grid.Row="0" Grid.Column="2" Text="Interval" Style="{StaticResource main_TextBlock}"/>
+
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="TurnTable Index" Style="{StaticResource main_TextBlock}"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Spinner Table Clean" Style="{StaticResource main_TextBlock}"/>
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Chunk Tab Clean" Style="{StaticResource main_TextBlock}"/>
+                <TextBlock Grid.Row="4" Grid.Column="0" Text="Warm-up After Auto" Style="{StaticResource main_TextBlock}"/>
+                <TextBlock Grid.Row="5" Grid.Column="0" Text="Warm-up Time" Style="{StaticResource main_TextBlock}"/>
+
+                <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+                <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+                <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+                <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+
+                <Grid Grid.Row="5" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                    <TextBlock Text="min"  Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center" Style="{StaticResource main_TextBlock}"/>
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                    <TextBlock Text="sec"  Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center" Style="{StaticResource main_TextBlock}"/>
+                </Grid>
+
+                <Grid Grid.Row="2" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                    <TextBlock Text="sec" Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"  Style="{StaticResource main_TextBlock}"/>
+                </Grid>
+
+
+            </Grid>
+
+            <Grid Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="350"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="Collant" Style="{StaticResource main_TextBlock}"/>
+                <TextBlock Grid.Row="0" Grid.Column="2" Text="Rotate" Style="{StaticResource main_TextBlock}"/>
+
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Spindle 1" Style="{StaticResource main_TextBlock}"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Spindle 2" Style="{StaticResource main_TextBlock}"/>
+
+
+                <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+                <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+
+
+
+
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                    <TextBlock Text="rpm"  Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"  Style="{StaticResource main_TextBlock}"/>
+                </Grid>
+
+                <Grid Grid.Row="2" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                    <TextBlock Text="rpm"  Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"  Style="{StaticResource main_TextBlock}"/>
+                </Grid>
+
+
+            </Grid>
+            <Grid Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="350"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="Air Blow" Style="{StaticResource main_TextBlock}"/>
+                <TextBlock Grid.Row="0" Grid.Column="2" Text="Rotate" Style="{StaticResource main_TextBlock}"/>
+
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Chunk Table A" Style="{StaticResource main_TextBlock}"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Chunk Table B" Style="{StaticResource main_TextBlock}"/>
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Chunk Table C" Style="{StaticResource main_TextBlock}"/>
+
+
+                <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+                <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+                <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+
+
+
+
+                <Grid Grid.Row="1" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                    <TextBlock Text="rpm"  Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"  Style="{StaticResource main_TextBlock}"/>
+                </Grid>
+
+                <Grid Grid.Row="2" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                    <TextBlock Text="rpm" Style="{StaticResource main_TextBlock}" Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                </Grid>
+
+                <Grid Grid.Row="3" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                    <TextBlock Text="rpm"  Style="{StaticResource main_TextBlock}" Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                </Grid>
+
+
+            </Grid>
+
+            <Grid Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="350"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="Sve Mode" Style="{StaticResource main_TextBlock}"/>
+
+
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Wheel Coolant" Style="{StaticResource main_TextBlock}"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Chuck Table Blow" Style="{StaticResource main_TextBlock}"/>
+
+
+                <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+                <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+            </Grid>
+            <Grid Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="350"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="Coolant Select" Style="{StaticResource main_TextBlock}" Foreground="LightGray"/>
+
+
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Spindel 1 (Option)" Style="{StaticResource main_TextBlock}" Foreground="LightGray"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Spindel 2 (Option)" Style="{StaticResource main_TextBlock}" Foreground="LightGray"/>
+
+
+                <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+                <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+            </Grid>
+
+
+        </StackPanel>
+    </Grid>
+</UserControl>

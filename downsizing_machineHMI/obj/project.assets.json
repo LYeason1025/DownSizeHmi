@@ -1,0 +1,348 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0-windows7.0": {
+      "FontAwesome.WPF/4.7.0.9": {
+        "type": "package",
+        "compile": {
+          "lib/net40/FontAwesome.WPF.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net40/FontAwesome.WPF.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Win32.SystemEvents/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Drawing.Common/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/System.Drawing.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Drawing.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/net6.0/System.Drawing.Common.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/net6.0/System.Drawing.Common.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "WPF-UI/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Drawing.Common": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/Wpf.Ui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/Wpf.Ui.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "Comm.MelsecLib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "DataConvertLib": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Comm.MelsecLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Comm.MelsecLib.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "DataConvertLib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/DataConvertLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataConvertLib.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "FontAwesome.WPF/4.7.0.9": {
+      "sha512": "SXE080rnyWMm9Dt0BZzMxh89/o9teuSaqL1N+0O/XM/F/HU8JuZA4XaEKxjBigwZPHHU3/udTa0QMYCHkmH43Q==",
+      "type": "package",
+      "path": "fontawesome.wpf/4.7.0.9",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fontawesome.wpf.4.7.0.9.nupkg.sha512",
+        "fontawesome.wpf.nuspec",
+        "lib/net35/FontAwesome.WPF.dll",
+        "lib/net35/FontAwesome.WPF.xml",
+        "lib/net40/FontAwesome.WPF.dll",
+        "lib/net40/FontAwesome.WPF.xml",
+        "lib/uap10.0/FontAwesome.UWP.XML",
+        "lib/uap10.0/FontAwesome.UWP.dll",
+        "lib/uap10.0/FontAwesome.UWP.pri",
+        "lib/uap10.0/FontAwesome.UWP/FontAwesome.otf",
+        "lib/wp81/FontAwesome.WIN81.dll",
+        "lib/wp81/FontAwesome.WIN81.xml",
+        "tools/install.ps1"
+      ]
+    },
+    "Microsoft.Win32.SystemEvents/6.0.0": {
+      "sha512": "hqTM5628jSsQiv+HGpiq3WKBl2c8v1KZfby2J6Pr7pEPlK9waPdgEO6b8A/+/xn/yZ9ulv8HuqK71ONy2tg67A==",
+      "type": "package",
+      "path": "microsoft.win32.systemevents/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/Microsoft.Win32.SystemEvents.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/Microsoft.Win32.SystemEvents.dll",
+        "lib/net461/Microsoft.Win32.SystemEvents.xml",
+        "lib/net6.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net6.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll",
+        "lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.xml",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
+        "microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+        "microsoft.win32.systemevents.nuspec",
+        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/netcoreapp3.1/Microsoft.Win32.SystemEvents.xml",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Drawing.Common/6.0.0": {
+      "sha512": "NfuoKUiP2nUWwKZN6twGqXioIe1zVD0RIj2t976A+czLHr2nY454RwwXs6JU9Htc6mwqL6Dn/nEL3dpVf2jOhg==",
+      "type": "package",
+      "path": "system.drawing.common/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Drawing.Common.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Drawing.Common.dll",
+        "lib/net461/System.Drawing.Common.xml",
+        "lib/net6.0/System.Drawing.Common.dll",
+        "lib/net6.0/System.Drawing.Common.xml",
+        "lib/netcoreapp3.1/System.Drawing.Common.dll",
+        "lib/netcoreapp3.1/System.Drawing.Common.xml",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "runtimes/unix/lib/net6.0/System.Drawing.Common.dll",
+        "runtimes/unix/lib/net6.0/System.Drawing.Common.xml",
+        "runtimes/unix/lib/netcoreapp3.1/System.Drawing.Common.dll",
+        "runtimes/unix/lib/netcoreapp3.1/System.Drawing.Common.xml",
+        "runtimes/win/lib/net6.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/net6.0/System.Drawing.Common.xml",
+        "runtimes/win/lib/netcoreapp3.1/System.Drawing.Common.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.Drawing.Common.xml",
+        "system.drawing.common.6.0.0.nupkg.sha512",
+        "system.drawing.common.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "WPF-UI/2.0.3": {
+      "sha512": "1e9Q8pQGfi9YFp3WavKZjXyLYohIjXxk5q0NqEaamofVgIdxRxwqrkWha584FBUISRBBT/qFOrl97YBl5bs30Q==",
+      "type": "package",
+      "path": "wpf-ui/2.0.3",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net461/Wpf.Ui.dll",
+        "lib/net461/Wpf.Ui.xml",
+        "lib/net47/Wpf.Ui.dll",
+        "lib/net47/Wpf.Ui.xml",
+        "lib/net48/Wpf.Ui.dll",
+        "lib/net48/Wpf.Ui.xml",
+        "lib/net5.0-windows7.0/Wpf.Ui.dll",
+        "lib/net5.0-windows7.0/Wpf.Ui.xml",
+        "lib/net6.0-windows7.0/Wpf.Ui.dll",
+        "lib/net6.0-windows7.0/Wpf.Ui.xml",
+        "lib/netcoreapp3.1/Wpf.Ui.dll",
+        "lib/netcoreapp3.1/Wpf.Ui.xml",
+        "tools/VisualStudioToolsManifest.xml",
+        "wpf-ui.2.0.3.nupkg.sha512",
+        "wpf-ui.nuspec",
+        "wpfui.png"
+      ]
+    },
+    "Comm.MelsecLib/1.0.0": {
+      "type": "project",
+      "path": "../Comm.MelsecLib/Comm.MelsecLib.csproj",
+      "msbuildProject": "../Comm.MelsecLib/Comm.MelsecLib.csproj"
+    },
+    "DataConvertLib/1.0.0": {
+      "type": "project",
+      "path": "../DataConvertLib/DataConvertLib.csproj",
+      "msbuildProject": "../DataConvertLib/DataConvertLib.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0-windows7.0": [
+      "Comm.MelsecLib >= 1.0.0",
+      "FontAwesome.WPF >= 4.7.0.9",
+      "WPF-UI >= 2.0.3"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\OyO\\.nuget\\packages\\": {},
+    "D:\\Visual studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\减薄机软件\\downsizing_machineHMI0420\\downsizing_machineHMI\\downsizing_machineHMI\\downsizing_machineHMI.csproj",
+      "projectName": "downsizing_machineHMI",
+      "projectPath": "D:\\减薄机软件\\downsizing_machineHMI0420\\downsizing_machineHMI\\downsizing_machineHMI\\downsizing_machineHMI.csproj",
+      "packagesPath": "C:\\Users\\OyO\\.nuget\\packages\\",
+      "outputPath": "D:\\减薄机软件\\downsizing_machineHMI0420\\downsizing_machineHMI\\downsizing_machineHMI\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Visual studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\OyO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://www.nuget.org/api/v2/": {}
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "projectReferences": {
+            "D:\\减薄机软件\\downsizing_machineHMI0420\\downsizing_machineHMI\\Comm.MelsecLib\\Comm.MelsecLib.csproj": {
+              "projectPath": "D:\\减薄机软件\\downsizing_machineHMI0420\\downsizing_machineHMI\\Comm.MelsecLib\\Comm.MelsecLib.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
+        "dependencies": {
+          "FontAwesome.WPF": {
+            "target": "Package",
+            "version": "[4.7.0.9, )"
+          },
+          "WPF-UI": {
+            "target": "Package",
+            "version": "[2.0.3, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用“.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1”而不是项目目标框架“net6.0-windows7.0”还原包“FontAwesome.WPF 4.7.0.9”。此包可能与项目不完全兼容。",
+      "libraryId": "FontAwesome.WPF",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
+}

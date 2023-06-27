@@ -1,0 +1,77 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "AutoSystemTests/1.0.0": {
+        "dependencies": {
+          "Comm.MelsecLib": "1.0.0",
+          "xktComm": "7.0.0.0",
+          "xktNodeSettings": "1.0.0.0"
+        },
+        "runtime": {
+          "AutoSystemTests.dll": {}
+        }
+      },
+      "Comm.MelsecLib/1.0.0": {
+        "dependencies": {
+          "DataConvertLib": "1.0.0"
+        },
+        "runtime": {
+          "Comm.MelsecLib.dll": {}
+        }
+      },
+      "DataConvertLib/1.0.0": {
+        "runtime": {
+          "DataConvertLib.dll": {}
+        }
+      },
+      "xktComm/7.0.0.0": {
+        "runtime": {
+          "xktComm.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.0.0"
+          }
+        }
+      },
+      "xktNodeSettings/1.0.0.0": {
+        "runtime": {
+          "xktNodeSettings.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AutoSystemTests/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Comm.MelsecLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DataConvertLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "xktComm/7.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "xktNodeSettings/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

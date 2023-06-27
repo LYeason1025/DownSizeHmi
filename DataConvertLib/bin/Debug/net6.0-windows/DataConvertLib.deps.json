@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "DataConvertLib/1.0.0": {
+        "runtime": {
+          "DataConvertLib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DataConvertLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

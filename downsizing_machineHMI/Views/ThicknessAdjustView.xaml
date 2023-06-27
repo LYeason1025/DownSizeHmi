@@ -1,0 +1,419 @@
+﻿<UserControl x:Class="downsizing_machineHMI.Views.ThicknessAdjustView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:downsizing_machineHMI.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <StackPanel>
+                    <TextBlock Text="Thickness Adjustment" Background="AliceBlue" FontSize="20"/>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Row="1"  Grid.Column="0" Text="Z1" Style="{StaticResource main_TextBlock}"/>
+
+                        <TextBlock Grid.Row="1"  Grid.Column="1" Text="Height" Style="{StaticResource main_TextBlock}"/>
+                        <TextBlock Grid.Row="1"  Grid.Column="2" Text="Height" Style="{StaticResource main_TextBlock}"/>
+                        <TextBlock Grid.Row="1"  Grid.Column="3" Text="Thickness" Style="{StaticResource main_TextBlock}"/>
+                        <TextBlock Grid.Row="1"  Grid.Column="4" Text="Total" Style="{StaticResource main_TextBlock}"/>
+
+                        <TextBlock Grid.Row="2"  Grid.Column="1" Text="Adjust" Style="{StaticResource main_TextBlock}"/>
+                        <TextBlock Grid.Row="2"  Grid.Column="2" Text="Offset" Style="{StaticResource main_TextBlock}"/>
+                        <TextBlock Grid.Row="2"  Grid.Column="3" Text="Adjust" Style="{StaticResource main_TextBlock}"/>
+                        <TextBlock Grid.Row="2"  Grid.Column="4" Text="Offset" Style="{StaticResource main_TextBlock}"/>
+
+                        <TextBlock Grid.Row="3"  Grid.Column="0" Text="Common" Style="{StaticResource main_TextBlock}"/>
+
+                        <Grid Grid.Row="3" Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                            <TextBlock Text="+"  Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center" Style="{StaticResource main_TextBlock}"/>
+                        </Grid>
+                        <Grid Grid.Row="3" Grid.Column="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                            <TextBlock Text="+" Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"  Style="{StaticResource main_TextBlock}"/>
+                        </Grid>
+                        <Grid Grid.Row="3" Grid.Column="3">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                            <TextBlock Text="=" Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center" Style="{StaticResource main_TextBlock}"/>
+                        </Grid>
+
+                        <Grid Grid.Row="3" Grid.Column="4">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                            <TextBlock Text="um" Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"  Style="{StaticResource main_TextBlock}"/>
+                        </Grid>
+
+                    </Grid>
+                    <Rectangle Fill="Transparent" Height="50"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel  Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Right">
+                            <TextBlock Text="Height" Style="{StaticResource main_TextBlock}" Margin="5,5,32,5"/>
+                            <TextBlock Text="Thicknes" Style="{StaticResource main_TextBlock}" Margin="5,5,20,5"/>
+                        </StackPanel>
+                        <StackPanel  Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Right">
+                            <TextBlock Text="Offset" Style="{StaticResource main_TextBlock}" Margin="0,5,0,5"/>
+                            <TextBlock Text="Adjustment" Style="{StaticResource main_TextBlock}"/>
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="0" Grid.Column="2" Text="Total" Style="{StaticResource main_TextBlock}" Margin="50,5,5,5"/>
+                        <TextBlock Grid.Row="1" Grid.Column="2" Text="Offset" Style="{StaticResource main_TextBlock}" Margin="50,5,5,5"/>
+
+                        <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+
+                        <Grid Grid.Row="2" Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                <TextBlock Text="Chuck Table A" Style="{StaticResource main_TextBlock}"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                                    <TextBlock Text="+" Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"  Style="{StaticResource main_TextBlock}"/>
+                                </Grid>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                                    <TextBlock Text="+" Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"  Style="{StaticResource main_TextBlock}"/>
+                                </Grid>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                                <TextBlock Text="Chuck Table B" Style="{StaticResource main_TextBlock}"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                                    <TextBlock Text="+" Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"  Style="{StaticResource main_TextBlock}"/>
+                                </Grid>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                                    <TextBlock Text="+" Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"  Style="{StaticResource main_TextBlock}"/>
+                                </Grid>
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                                <TextBlock Text="Chuck Table C" Style="{StaticResource main_TextBlock}"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                                    <TextBlock Text="+" Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"  Style="{StaticResource main_TextBlock}"/>
+                                </Grid>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                                    <TextBlock Text="+" Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"  Style="{StaticResource main_TextBlock}"/>
+                                </Grid>
+                            </StackPanel>
+                        </Grid>
+                        <Grid Grid.Row="2" Grid.Column="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                <TextBlock Text="=" Style="{StaticResource main_TextBlock}"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                                </Grid>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                                <TextBlock Text="=" Style="{StaticResource main_TextBlock}"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                                </Grid>
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                                <TextBlock Text="=" Style="{StaticResource main_TextBlock}"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                                </Grid>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="1">
+                <StackPanel>
+                    <TextBlock Text="Thickness Adjustment" Background="AliceBlue" FontSize="20"/>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Row="1"  Grid.Column="0" Text="Z2" Style="{StaticResource main_TextBlock}"/>
+
+                        <TextBlock Grid.Row="1"  Grid.Column="1" Text="Height" Style="{StaticResource main_TextBlock}"/>
+                        <TextBlock Grid.Row="1"  Grid.Column="2" Text="Height" Style="{StaticResource main_TextBlock}"/>
+                        <TextBlock Grid.Row="1"  Grid.Column="3" Text="Thickness" Style="{StaticResource main_TextBlock}"/>
+                        <TextBlock Grid.Row="1"  Grid.Column="4" Text="Total" Style="{StaticResource main_TextBlock}"/>
+
+                        <TextBlock Grid.Row="2"  Grid.Column="1" Text="Adjust" Style="{StaticResource main_TextBlock}"/>
+                        <TextBlock Grid.Row="2"  Grid.Column="2" Text="Offset" Style="{StaticResource main_TextBlock}"/>
+                        <TextBlock Grid.Row="2"  Grid.Column="3" Text="Adjust" Style="{StaticResource main_TextBlock}"/>
+                        <TextBlock Grid.Row="2"  Grid.Column="4" Text="Offset" Style="{StaticResource main_TextBlock}"/>
+
+                        <TextBlock Grid.Row="3"  Grid.Column="0" Text="Common" Style="{StaticResource main_TextBlock}"/>
+
+                        <Grid Grid.Row="3" Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                            <TextBlock Text="+" Style="{StaticResource main_TextBlock}" Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                        </Grid>
+                        <Grid Grid.Row="3" Grid.Column="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                            <TextBlock Text="+" Style="{StaticResource main_TextBlock}" Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                        </Grid>
+                        <Grid Grid.Row="3" Grid.Column="3">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                            <TextBlock Text="="  Style="{StaticResource main_TextBlock}" Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                        </Grid>
+
+                        <Grid Grid.Row="3" Grid.Column="4">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                            <TextBlock Text="um"  Style="{StaticResource main_TextBlock}" Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                        </Grid>
+
+                    </Grid>
+                    <Rectangle Fill="Transparent" Height="50"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel  Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Right">
+                            <TextBlock Text="Height" Style="{StaticResource main_TextBlock}" Margin="5,5,32,5"/>
+                            <TextBlock Text="Thicknes" Style="{StaticResource main_TextBlock}" Margin="5,5,20,5"/>
+                        </StackPanel>
+                        <StackPanel  Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Right">
+                            <TextBlock Text="Offset" Style="{StaticResource main_TextBlock}" Margin="0,5,0,5"/>
+                            <TextBlock Text="Adjustment" Style="{StaticResource main_TextBlock}"/>
+                        </StackPanel>
+
+                        <TextBlock Grid.Row="0" Grid.Column="2" Text="Total" Style="{StaticResource main_TextBlock}" Margin="50,5,5,5"/>
+                        <TextBlock Grid.Row="1" Grid.Column="2" Text="Offset" Style="{StaticResource main_TextBlock}" Margin="50,5,5,5"/>
+
+                        <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource main_TextBox}"/>
+
+                        <Grid Grid.Row="2" Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                <TextBlock Text="Chuck Table A" Style="{StaticResource main_TextBlock}"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                                    <TextBlock Text="+"  Style="{StaticResource main_TextBlock}" Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                                </Grid>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                                    <TextBlock Text="+"  Style="{StaticResource main_TextBlock}" Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                                </Grid>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                                <TextBlock Text="Chuck Table B" Style="{StaticResource main_TextBlock}"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                                    <TextBlock Text="+"  Style="{StaticResource main_TextBlock}" Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                                </Grid>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                                    <TextBlock Text="+"  Style="{StaticResource main_TextBlock}" Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                                </Grid>
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                                <TextBlock Text="Chuck Table C" Style="{StaticResource main_TextBlock}"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                                    <TextBlock Text="+"  Style="{StaticResource main_TextBlock}" Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                                </Grid>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                                    <TextBlock Text="+"  Style="{StaticResource main_TextBlock}" Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                                </Grid>
+                            </StackPanel>
+                        </Grid>
+                        <Grid Grid.Row="2" Grid.Column="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                <TextBlock Text="=" Style="{StaticResource main_TextBlock}"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                                </Grid>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                                <TextBlock Text="=" Style="{StaticResource main_TextBlock}"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                                </Grid>
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                                <TextBlock Text="=" Style="{StaticResource main_TextBlock}"/>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBox Grid.Column="0" Style="{StaticResource main_TextBox}"/>
+                                </Grid>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+    </Grid>
+</UserControl>
+

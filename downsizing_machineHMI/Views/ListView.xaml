@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:downsizing_machineHMI.Views"
-              xmlns:fa="http://schemas.fontawesome.io/icons/"
+             xmlns:fa="http://schemas.fontawesome.com/icons/svg"
              mc:Ignorable="d"  
              >
     <Grid>
@@ -38,7 +38,7 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <fa:ImageAwesome Icon="CheckCircle" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                    <fa:SvgAwesome Icon="Regular_CircleCheck" Width="50" Margin="5,5,5,5" PrimaryColor="White"/>
                     <TextBlock Text="选择" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
                 </Grid>
             </Button>
@@ -54,7 +54,7 @@
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <fa:ImageAwesome Icon="Copy" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                        <fa:SvgAwesome Icon="Regular_Copy" Width="50" Margin="5,5,5,5" PrimaryColor="White"/>
                         <TextBlock Text="复制" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
                     </Grid>
                 </Button>
@@ -64,7 +64,7 @@
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <fa:ImageAwesome Icon="Eraser" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                        <fa:SvgAwesome Icon="Solid_Eraser" Width="50" Margin="5,5,5,5" PrimaryColor="White"/>
                         <TextBlock Text="删除" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
                     </Grid>
                 </Button>
@@ -75,7 +75,7 @@
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <fa:ImageAwesome Icon="SignOut" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                        <fa:SvgAwesome Icon="Solid_FileSignature" Width="50" Margin="5,5,5,5" PrimaryColor="White"/>
                         <TextBlock Text="重命名" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
                     </Grid>
                 </Button>
@@ -86,7 +86,7 @@
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <fa:ImageAwesome Icon="Paperclip" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                        <fa:SvgAwesome Icon="Solid_Paperclip" Width="50" Margin="5,5,5,5" PrimaryColor="White"/>
                         <TextBlock Text="添加" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
                     </Grid>
                 </Button>
@@ -96,7 +96,7 @@
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <fa:ImageAwesome Icon="Compass" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                        <fa:SvgAwesome Icon="Regular_Compass" Width="50" Margin="5,5,5,5" PrimaryColor="White"/>
                         <TextBlock Text="选项" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
                     </Grid>
                 </Button>
@@ -106,7 +106,7 @@
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <fa:ImageAwesome Icon="Undo" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                        <fa:SvgAwesome Icon="Solid_Reply" Width="50" Margin="5,5,5,5" PrimaryColor="White"/>
                         <TextBlock Text="取消" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
                     </Grid>
                 </Button>

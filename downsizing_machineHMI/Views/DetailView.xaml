@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:downsizing_machineHMI.Views"
-             xmlns:fa="http://schemas.fontawesome.io/icons/"
+             xmlns:fa="http://schemas.fontawesome.com/icons/svg"
              mc:Ignorable="d" 
              d:DesignHeight="935.064" d:DesignWidth="859.682">
     <Grid>
@@ -26,7 +26,7 @@
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <fa:ImageAwesome Icon="CircleOutlineNotch" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                        <fa:SvgAwesome Icon="Solid_ArrowRotateRight" Width="50" Margin="5,5,5,5" PrimaryColor="White"/>
                         <TextBlock Text="晶圆重置" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
                     </Grid>
                 </Button>
@@ -36,7 +36,7 @@
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <fa:ImageAwesome Icon="ClockOutline" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                        <fa:SvgAwesome Icon="Solid_ClockRotateLeft" Width="50" Margin="5,5,5,5" PrimaryColor="White"/>
                         <TextBlock Text="时间重置" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
                     </Grid>
                 </Button>
@@ -50,7 +50,7 @@
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <fa:ImageAwesome Icon="FileText" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                        <fa:SvgAwesome Icon="Regular_File" Width="50" Margin="5,5,5,5" PrimaryColor="White"/>
                         <TextBlock Text="详情1" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
                     </Grid>
                 </ToggleButton>
@@ -60,7 +60,7 @@
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <fa:ImageAwesome Icon="FileText" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                        <fa:SvgAwesome Icon="Regular_File" Width="50" Margin="5,5,5,5" PrimaryColor="White"/>
                         <TextBlock Text="详情2" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
                     </Grid>
                 </ToggleButton>
@@ -76,7 +76,7 @@
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <fa:ImageAwesome Icon="Reply" Width="50" Margin="5,5,5,5" Foreground="White"/>
+                        <fa:SvgAwesome Icon="Solid_Reply" Width="50" Margin="5,5,5,5" PrimaryColor="White"/>
                         <TextBlock Text="返回" Grid.Row="1"  HorizontalAlignment="Center" FontFamily="FontAwesome" Margin="5,5,5,5"/>
                     </Grid>
                 </Button>

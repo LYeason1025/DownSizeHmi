@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\减薄机软件\\downsizing_machineHMI0420\\downsizing_machineHMI\\DataConvertLib\\DataConvertLib.csproj",
+      "projectUniqueName": "W:\\减薄机\\DownSizeHmi\\DataConvertLib\\DataConvertLib.csproj",
       "projectName": "DataConvertLib",
-      "projectPath": "D:\\减薄机软件\\downsizing_machineHMI0420\\downsizing_machineHMI\\DataConvertLib\\DataConvertLib.csproj",
+      "projectPath": "W:\\减薄机\\DownSizeHmi\\DataConvertLib\\DataConvertLib.csproj",
       "packagesPath": "C:\\Users\\OyO\\.nuget\\packages\\",
-      "outputPath": "D:\\减薄机软件\\downsizing_machineHMI0420\\downsizing_machineHMI\\DataConvertLib\\obj\\",
+      "outputPath": "W:\\减薄机\\DownSizeHmi\\DataConvertLib\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Visual studio\\Shared\\NuGetPackages"

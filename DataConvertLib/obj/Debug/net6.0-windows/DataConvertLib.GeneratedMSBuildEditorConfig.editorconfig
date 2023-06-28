@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DataConvertLib
-build_property.ProjectDir = D:\减薄机软件\downsizing_machineHMI0420\downsizing_machineHMI\DataConvertLib\
+build_property.ProjectDir = W:\减薄机\DownSizeHmi\DataConvertLib\

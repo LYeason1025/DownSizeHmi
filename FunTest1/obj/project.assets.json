@@ -2309,11 +2309,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\减薄机软件\\downsizing_machineHMI0420\\downsizing_machineHMI\\FunTest1\\FunTest1.csproj",
+      "projectUniqueName": "W:\\减薄机\\DownSizeHmi\\FunTest1\\FunTest1.csproj",
       "projectName": "FunTest1",
-      "projectPath": "D:\\减薄机软件\\downsizing_machineHMI0420\\downsizing_machineHMI\\FunTest1\\FunTest1.csproj",
+      "projectPath": "W:\\减薄机\\DownSizeHmi\\FunTest1\\FunTest1.csproj",
       "packagesPath": "C:\\Users\\OyO\\.nuget\\packages\\",
-      "outputPath": "D:\\减薄机软件\\downsizing_machineHMI0420\\downsizing_machineHMI\\FunTest1\\obj\\",
+      "outputPath": "W:\\减薄机\\DownSizeHmi\\FunTest1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Visual studio\\Shared\\NuGetPackages"

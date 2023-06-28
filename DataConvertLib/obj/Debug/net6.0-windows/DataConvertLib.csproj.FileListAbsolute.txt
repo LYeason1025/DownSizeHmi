@@ -34,3 +34,15 @@ D:\减薄机软件\downsizing_machineHMI0420\downsizing_machineHMI\DataConvertLi
 D:\减薄机软件\downsizing_machineHMI0420\downsizing_machineHMI\DataConvertLib\obj\Debug\net6.0-windows\refint\DataConvertLib.dll
 D:\减薄机软件\downsizing_machineHMI0420\downsizing_machineHMI\DataConvertLib\obj\Debug\net6.0-windows\DataConvertLib.pdb
 D:\减薄机软件\downsizing_machineHMI0420\downsizing_machineHMI\DataConvertLib\obj\Debug\net6.0-windows\ref\DataConvertLib.dll
+W:\减薄机\DownSizeHmi\DataConvertLib\bin\Debug\net6.0-windows\DataConvertLib.deps.json
+W:\减薄机\DownSizeHmi\DataConvertLib\bin\Debug\net6.0-windows\DataConvertLib.dll
+W:\减薄机\DownSizeHmi\DataConvertLib\bin\Debug\net6.0-windows\DataConvertLib.pdb
+W:\减薄机\DownSizeHmi\DataConvertLib\obj\Debug\net6.0-windows\DataConvertLib.csproj.AssemblyReference.cache
+W:\减薄机\DownSizeHmi\DataConvertLib\obj\Debug\net6.0-windows\DataConvertLib.GeneratedMSBuildEditorConfig.editorconfig
+W:\减薄机\DownSizeHmi\DataConvertLib\obj\Debug\net6.0-windows\DataConvertLib.AssemblyInfoInputs.cache
+W:\减薄机\DownSizeHmi\DataConvertLib\obj\Debug\net6.0-windows\DataConvertLib.AssemblyInfo.cs
+W:\减薄机\DownSizeHmi\DataConvertLib\obj\Debug\net6.0-windows\DataConvertLib.csproj.CoreCompileInputs.cache
+W:\减薄机\DownSizeHmi\DataConvertLib\obj\Debug\net6.0-windows\DataConvertLib.dll
+W:\减薄机\DownSizeHmi\DataConvertLib\obj\Debug\net6.0-windows\refint\DataConvertLib.dll
+W:\减薄机\DownSizeHmi\DataConvertLib\obj\Debug\net6.0-windows\DataConvertLib.pdb
+W:\减薄机\DownSizeHmi\DataConvertLib\obj\Debug\net6.0-windows\ref\DataConvertLib.dll

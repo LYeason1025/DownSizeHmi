@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B67njYsyns8GaVU2AAZE/VpCSBXgNsaeeD5vGYuJSfKSuf8wc1e5XpQqgAqEcqL+7wQeEfFVF7pPTi8Y+kaL3g==",
+  "dgSpecHash": "VPCiQduMZYix6F5E4otYHgjihF7RY5LuiCc+kyxCmV67OLo1bDDdB2qc1XJ8eAMZdSDQ+pf0jV4wtYBjx5rUFg==",
   "success": true,
-  "projectFilePath": "D:\\减薄机软件\\downsizing_machineHMI0420\\downsizing_machineHMI\\FunTest1\\FunTest1.csproj",
+  "projectFilePath": "W:\\减薄机\\DownSizeHmi\\FunTest1\\FunTest1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\OyO\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\OyO\\.nuget\\packages\\microsoft.codecoverage\\17.5.0\\microsoft.codecoverage.17.5.0.nupkg.sha512",

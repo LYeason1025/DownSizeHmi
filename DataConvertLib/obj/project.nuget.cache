@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LaNvgwe398Avcn0AYL3g88LRN1rBEESsMCVgRWQcv6c0ccfL5o8G1sf6vxMtEqKMD0ExWZMNhSk/RWKJE1/98Q==",
+  "dgSpecHash": "yJHDuo3rcEeyWFA9ZkVMAW2HVh8oUPfSxiXQoJ5VgruQJ+qEwfFV7E+lvAIjXozSjsMZTCC9m/vAX7XCHpQ0uQ==",
   "success": true,
-  "projectFilePath": "D:\\减薄机软件\\downsizing_machineHMI0420\\downsizing_machineHMI\\DataConvertLib\\DataConvertLib.csproj",
+  "projectFilePath": "W:\\减薄机\\DownSizeHmi\\DataConvertLib\\DataConvertLib.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -36,11 +36,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\减薄机软件\\downsizing_machineHMI0420\\downsizing_machineHMI\\Comm.MelsecLib\\Comm.MelsecLib.csproj",
+      "projectUniqueName": "W:\\减薄机\\DownSizeHmi\\Comm.MelsecLib\\Comm.MelsecLib.csproj",
       "projectName": "Comm.MelsecLib",
-      "projectPath": "D:\\减薄机软件\\downsizing_machineHMI0420\\downsizing_machineHMI\\Comm.MelsecLib\\Comm.MelsecLib.csproj",
+      "projectPath": "W:\\减薄机\\DownSizeHmi\\Comm.MelsecLib\\Comm.MelsecLib.csproj",
       "packagesPath": "C:\\Users\\OyO\\.nuget\\packages\\",
-      "outputPath": "D:\\减薄机软件\\downsizing_machineHMI0420\\downsizing_machineHMI\\Comm.MelsecLib\\obj\\",
+      "outputPath": "W:\\减薄机\\DownSizeHmi\\Comm.MelsecLib\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Visual studio\\Shared\\NuGetPackages"
@@ -61,8 +61,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "D:\\减薄机软件\\downsizing_machineHMI0420\\downsizing_machineHMI\\DataConvertLib\\DataConvertLib.csproj": {
-              "projectPath": "D:\\减薄机软件\\downsizing_machineHMI0420\\downsizing_machineHMI\\DataConvertLib\\DataConvertLib.csproj"
+            "W:\\减薄机\\DownSizeHmi\\DataConvertLib\\DataConvertLib.csproj": {
+              "projectPath": "W:\\减薄机\\DownSizeHmi\\DataConvertLib\\DataConvertLib.csproj"
             }
           }
         }
